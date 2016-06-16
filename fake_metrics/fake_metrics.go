@@ -48,7 +48,7 @@ var (
 func main() {
 	flag.Parse()
 
-	log.NewLogger(0, "console", fmt.Sprintf(`{"level": %d, "formatting":true}`, *logLevel))
+	log.New("console", fmt.Sprintf(`{"level": %d, "formatting":true}`, *logLevel))
 
 	if *showVersion {
 		fmt.Println("fake_metrics")
