@@ -182,7 +182,7 @@ func main() {
 		conf.ParseAll()
 	}
 
-	log.NewLogger(0, "console", fmt.Sprintf(`{"level": %d, "formatting":true}`, *logLevel))
+	log.New("console", fmt.Sprintf(`{"level": %d, "formatting":true}`, *logLevel))
 
 	if *showVersion {
 		fmt.Printf("nsq_probe_events_to_elasticsearch (built with %s, git hash %s)\n", runtime.Version(), GitHash)
