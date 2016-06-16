@@ -147,6 +147,7 @@ func main() {
 	mdata.LogLevel = logLevel
 	// workaround for https://github.com/grafana/grafana/issues/4055
 	aaa := ' '
+	fmt.Println(aaa)
 	switch logLevel {
 	case 0:
 		aaa = 'F'
