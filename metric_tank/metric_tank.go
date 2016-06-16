@@ -148,9 +148,9 @@ func main() {
 	// workaround for https://github.com/grafana/grafana/issues/4055
 	switch logLevel {
 	case 0:
-		log.Level(log.TRACE)
+		log.Trace
 	case 1:
-		log.Level(log.DEBUG)
+		log.Debug
 	case 2:
 		log.Level(log.INFO)
 	case 3:
