@@ -143,12 +143,12 @@ func main() {
 		conf.ParseAll()
 	}
 
-	log.NewLogger(0, "console", fmt.Sprintf(`{"level": %d, "formatting":false}`, logLevel))
+	log.New(0, "console", fmt.Sprintf(`{"level": %d, "formatting":false}`, logLevel))
 	mdata.LogLevel = logLevel
 	// workaround for https://github.com/grafana/grafana/issues/4055
 	switch logLevel {
 	case 0:
-		log.Level(log.TRACE)
+		log.Level(log.Trace)
 	case 1:
 		log.Level(log.DEBUG)
 	case 2:
