@@ -79,7 +79,7 @@ func (h *StdoutHandler) HandleMessage(m *nsq.Message) error {
 func main() {
 	flag.Parse()
 
-	log.NewLogger(0, "console", fmt.Sprintf(`{"level": %d, "formatting":true}`, *logLevel))
+	log.New("console", fmt.Sprintf(`{"level": %d, "formatting":true}`, *logLevel))
 
 	if *showVersion {
 		fmt.Println("nsq_metricpersist_to_stdout")
