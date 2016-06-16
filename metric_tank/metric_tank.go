@@ -146,21 +146,22 @@ func main() {
 	log.New("console", fmt.Sprintf(`{"level": %d, "formatting":false}`, logLevel))
 	mdata.LogLevel = logLevel
 	// workaround for https://github.com/grafana/grafana/issues/4055
+	aaa := ' '
 	switch logLevel {
 	case 0:
-		log.Trace
+		aaa = 'F'
 	case 1:
-		log.Debug
+		aaa = 'F'
 	case 2:
-		log.Level(log.INFO)
+		aaa = 'F'
 	case 3:
-		log.Level(log.WARN)
+		aaa = 'F'
 	case 4:
-		log.Level(log.ERROR)
+		aaa = 'F'
 	case 5:
-		log.Level(log.CRITICAL)
+		aaa = 'F'
 	case 6:
-		log.Level(log.FATAL)
+		aaa = 'F'
 	}
 
 	if *showVersion {
